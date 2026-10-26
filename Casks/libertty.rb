@@ -1,6 +1,6 @@
 cask "libertty" do
-  version "0.3.7"
-  sha256 "d0d90c728f2d2e4328c45211d4f24d065d45ee98ef71cb5f8a48c506f7553a92"
+  version "0.3.8"
+  sha256 "3db577de80e53bee83aa7c8f1922b3e6f19c1c495e12d47ca9dac46e0982f151"
 
   url "https://github.com/ziwangprincex/Libertty/releases/download/v#{version}/Libertty-#{version}.zip"
   name "Libertty"

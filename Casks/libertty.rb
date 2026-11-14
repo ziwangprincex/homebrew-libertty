@@ -1,6 +1,6 @@
 cask "libertty" do
-  version "0.6.7"
-  sha256 "2cab4432248f7864b194a3bd5eb486068e7f56f22b4e12edee9aa13c5f0594f6"
+  version "0.7.0"
+  sha256 "252bb1a3c99bfb7728db70e7a9abe5706dfdd1cb1e20d06ce903d01aff4ee187"
 
   url "https://github.com/ziwangprincex/Libertty/releases/download/v#{version}/Libertty-#{version}.zip"
   name "Libertty"
@@ -20,8 +20,8 @@ cask "libertty" do
   app "Libertty.app"
   binary "#{appdir}/Libertty.app/Contents/Resources/bin/libertty"
 
-  # Ad-hoc signed, not notarized: Gatekeeper would refuse to open it (if
-  # this can't be done, macOS asks once, as for the DMG).
+  # Not notarized (signed with Libertty's own certificate): Gatekeeper would
+  # refuse to open it (if this can't be done, macOS asks once, as for the DMG).
   postflight_steps do
     run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Libertty.app"], must_succeed: false
   end
